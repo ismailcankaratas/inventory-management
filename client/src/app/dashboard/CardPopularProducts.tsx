@@ -6,7 +6,6 @@ import { useGetDashboardMetricsQuery } from "@/state/api";
 
 const CardPopularProducts = () => {
   const { data: dashboardMetrics, isLoading } = useGetDashboardMetricsQuery();
-  console.log("dashboardMetrics", dashboardMetrics);
 
   return (
     <div className="row-span-3 xl:row-span-6 bg-white shadow-md rounded-2xl pb-16">
