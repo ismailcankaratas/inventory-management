@@ -12,7 +12,8 @@ This project is an **Inventory Management System** designed to help organization
 By leveraging modern web technologies, this Inventory Management System aims to streamline operations, reduce manual errors, and enhance overall productivity for businesses of all sizes. 
 
 ### Images
-![image](https://github.com/user-attachments/assets/05d88ebd-6ab6-4973-90ff-2f4bd6748ebb)
+![image](https://github.com/user-attachments/assets/03604059-9314-47bb-a572-3885fd494177)
+
 
 ## Installation
 
