@@ -49,7 +49,7 @@ const themes = {
   dark: {
     ...darkTheme,
     white: colors.gray["950"],
-    black: colors.gray["50"],
+    black: "#000",
   },
 };
 
