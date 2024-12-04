@@ -5,27 +5,45 @@ import Header from "@/app/(components)/Header";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 
 const columns: GridColDef[] = [
-  { field: "productId", headerName: "ID", width: 90 },
-  { field: "name", headerName: "Product Name", width: 200 },
+  {
+    field: "productId",
+    headerName: "ID",
+    minWidth: 90,
+    cellClassName: "!text-gray-500",
+    headerAlign: "center",
+  },
+  {
+    field: "name",
+    headerName: "Product Name",
+    minWidth: 200,
+    cellClassName: "!text-gray-500",
+    headerAlign: "center",
+  },
   {
     field: "price",
     headerName: "Price",
-    width: 110,
+    minWidth: 110,
     type: "number",
     valueGetter: (value, row) => `$${row.price}`,
+    cellClassName: "!text-gray-500",
+    headerAlign: "center",
   },
   {
     field: "rating",
     headerName: "Rating",
-    width: 110,
+    minWidth: 110,
     type: "number",
     valueGetter: (value, row) => (row.rating ? row.rating : "N/A"),
+    cellClassName: "!text-gray-500",
+    headerAlign: "center",
   },
   {
     field: "stockQuantity",
     headerName: "Stock Quantity",
-    width: 150,
+    minWidth: 150,
     type: "number",
+    cellClassName: "!text-gray-500",
+    headerAlign: "center",
   },
 ];
 
@@ -52,9 +70,17 @@ const Inventory = () => {
         columns={columns}
         getRowId={(row) => row.productId}
         checkboxSelection
+        initialState={{
+          pagination: {
+            paginationModel: {
+              pageSize: 10,
+            },
+          },
+        }}
+        pageSizeOptions={[10]}
         className="bg-white shadow rounded-lg border border-gray-200 mt-5"
         sx={{
-          "& .MuiDataGrid-cell": {
+          ".dark & .MuiTablePagination-root": {
             color: "#fff",
           },
         }}
