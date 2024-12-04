@@ -49,7 +49,7 @@ const CreateProductModal = ({
 
   const labelCssStyles = "block text-sm font-medium text-gray-700";
   const inputCssStyles =
-    "block w-full mb-2 p-2 border-gray-500 border-2 rounded-md";
+    "block w-full p-2 mb-2 md:2-80 border-2 border-gray-300 bg-white rounded-lg focus:outline-none focus:border-blue-500";
 
   return (
     <div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-20">
