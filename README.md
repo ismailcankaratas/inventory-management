@@ -1,78 +1,120 @@
-### Inventory Management
+**Inventory Management System**  
+The Inventory Management System is a comprehensive solution designed to help businesses efficiently track and manage their stock levels, orders, sales, and deliveries. By integrating advanced client and server technologies, the system offers real-time inventory monitoring and control to enhance operational efficiency and accuracy.
 
-This project is an **Inventory Management System** designed to help organizations efficiently track and manage their stock levels, orders, sales, and deliveries. By integrating both client and server components, the system provides a comprehensive solution for real-time inventory monitoring and control.
+### Key Features:
+- **Real-Time Inventory Tracking**  
+  Continuously monitor stock levels to avoid overstocking or stock shortages.
+  
+- **Order Management**  
+  Seamlessly handle purchase and sales orders with accurate and timely processing.
+  
+- **Reporting and Analytics**  
+  Generate detailed reports and insights to evaluate inventory performance and support data-driven decision-making.
+  
+- **User Authentication and Authorization**  
+  Secure access with role-based permissions to ensure data protection and controlled system usage.
 
-**Key Features:**
+### Why Choose This System?  
+Built with modern web technologies, this Inventory Management System is designed to:
+- Streamline operational workflows.
+- Minimize manual errors.
+- Enhance productivity for businesses of all sizes.
 
-- **Real-Time Inventory Tracking:** Monitor stock levels continuously to prevent overstocking or stockouts.
-- **Order Management:** Handle purchase and sales orders seamlessly, ensuring accurate and timely processing.
-- **Reporting and Analytics:** Generate detailed reports to analyze inventory performance and support data-driven decision-making.
-- **User Authentication and Authorization:** Ensure secure access to the system with role-based permissions.
-
-By leveraging modern web technologies, this Inventory Management System aims to streamline operations, reduce manual errors, and enhance overall productivity for businesses of all sizes. 
+This solution is ideal for organizations looking to optimize their inventory processes while gaining actionable insights through robust analytics and reporting tools.
 
 ### Images
 ![image](https://github.com/user-attachments/assets/03604059-9314-47bb-a572-3885fd494177)
 
+### Prerequisites
+Ensure you have the following installed on your system:
+- **Node.js** (Latest LTS recommended)
+- **npm** or **yarn** (Comes with Node.js)
+- **Prisma CLI** (Optional, but useful for managing the database schema)
+- **PostgreSQL/MySQL** or the database specified in `schema.prisma` for Prisma
 
-## Installation
+---
 
-### Requirements
+### Steps to Install and Run
 
-- Node.js
-- npm (Node Package Manager)
-
-### Steps
-
-1. Clone the repository to your local machine:
-
+1. **Clone the Repository**:
    ```bash
    git clone https://github.com/ismailcankaratas/inventory-management.git
+   cd inventory-management
    ```
 
-2. Navigate to the **client** directory and install dependencies:
-
+2. **Install Client Dependencies**:
+   Navigate to the `client` directory and install the dependencies.
    ```bash
-   cd inventory-management/client
+   cd client
    npm install
    ```
+   Or, if you are using `yarn`:
+   ```bash
+   yarn install
+   ```
 
-3. Navigate to the **server** directory and install dependencies:
-
+3. **Install Server Dependencies**:
+   Navigate to the `server` directory and install the dependencies.
    ```bash
    cd ../server
    npm install
    ```
+   Or:
+   ```bash
+   yarn install
+   ```
 
-## Usage
+4. **Set Up Environment Variables**:
+   - Copy the example `.env.example` file in the `server` directory and rename it to `.env`:
+     ```bash
+     cp .env.example .env
+     ```
+   - Edit the `.env` file to include your database connection URL and any other required variables.
 
-### Development Environment
+5. **Set Up Prisma Database**:
+   - Run the Prisma migrations to set up the database schema:
+     ```bash
+     npx prisma migrate dev
+     ```
+   - (Optional) Seed the database with initial data:
+     ```bash
+     npx prisma db seed
+     ```
 
-1. In the **server** directory, start the server:
-
+6. **Run the Server**:
+   Start the server by navigating to the `server` directory:
    ```bash
    npm run dev
    ```
-
-2. In a separate terminal, navigate to the **client** directory and start the client application:
-
+   Or:
    ```bash
-   npm start
+   yarn dev
    ```
 
-After completing these steps, you can view the application in your browser at [http://localhost:3000](http://localhost:3000).
+7. **Run the Client**:
+   Open another terminal window, navigate to the `client` directory, and start the Next.js application:
+   ```bash
+   npm run dev
+   ```
+   Or:
+   ```bash
+   yarn dev
+   ```
 
-## Contributing
+8. **Access the Application**:
+   - The client application should now be running at `http://localhost:3000`.
+   - The API server should be running at `http://localhost:<server-port>` (check the port defined in the `.env` file).
 
-1. Fork the project.
-2. Create a new branch: `git checkout -b feature/NewFeature`
-3. Commit your changes: `git commit -m 'Add new feature'`
-4. Push to your branch: `git push origin feature/NewFeature`
-5. Create a Pull Request.
+---
 
-## License
+### Additional Notes:
+- **Development Scripts**:
+  - Use `npm run lint` in the `client` directory to check for linting issues.
+  - Use `npm run build` in both `client` and `server` directories for production builds.
+- **Tailwind Configuration**:
+  - Tailwind is configured in `tailwind.config.ts` in the `client` folder. You can customize styles as needed.
 
-This project is licensed under the MIT License. For more information, please refer to the `LICENSE` file.
+Let me know if you encounter any issues!
 
 ## Contact
 
